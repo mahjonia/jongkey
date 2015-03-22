@@ -14,6 +14,8 @@
 		FB198AB71ABE87090072CBF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB198AB61ABE87090072CBF3 /* Images.xcassets */; };
 		FB198ABA1ABE87090072CBF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB198AB81ABE87090072CBF3 /* LaunchScreen.xib */; };
 		FB198AC61ABE87090072CBF3 /* jongkeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB198AC51ABE87090072CBF3 /* jongkeyTests.m */; };
+		FB198AD91ABE87A10072CBF3 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB198AD81ABE87A10072CBF3 /* KeyboardViewController.m */; };
+		FB198ADC1ABE87A10072CBF3 /* custom_keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FB198AD31ABE87A10072CBF3 /* custom_keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +26,28 @@
 			remoteGlobalIDString = FB198AA51ABE87090072CBF3;
 			remoteInfo = jongkey;
 		};
+		FB198ADA1ABE87A10072CBF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB198A9E1ABE87090072CBF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB198AD21ABE87A10072CBF3;
+			remoteInfo = custom_keyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB198AE01ABE87A10072CBF3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FB198ADC1ABE87A10072CBF3 /* custom_keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FB198AA61ABE87090072CBF3 /* jongkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jongkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +63,10 @@
 		FB198ABF1ABE87090072CBF3 /* jongkeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jongkeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB198AC41ABE87090072CBF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB198AC51ABE87090072CBF3 /* jongkeyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jongkeyTests.m; sourceTree = "<group>"; };
+		FB198AD31ABE87A10072CBF3 /* custom_keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = custom_keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB198AD61ABE87A10072CBF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB198AD71ABE87A10072CBF3 /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		FB198AD81ABE87A10072CBF3 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB198AD01ABE87A10072CBF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +99,7 @@
 			children = (
 				FB198AA81ABE87090072CBF3 /* jongkey */,
 				FB198AC21ABE87090072CBF3 /* jongkeyTests */,
+				FB198AD41ABE87A10072CBF3 /* custom_keyboard */,
 				FB198AA71ABE87090072CBF3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +109,7 @@
 			children = (
 				FB198AA61ABE87090072CBF3 /* jongkey.app */,
 				FB198ABF1ABE87090072CBF3 /* jongkeyTests.xctest */,
+				FB198AD31ABE87A10072CBF3 /* custom_keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +155,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FB198AD41ABE87A10072CBF3 /* custom_keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FB198AD71ABE87A10072CBF3 /* KeyboardViewController.h */,
+				FB198AD81ABE87A10072CBF3 /* KeyboardViewController.m */,
+				FB198AD51ABE87A10072CBF3 /* Supporting Files */,
+			);
+			path = custom_keyboard;
+			sourceTree = "<group>";
+		};
+		FB198AD51ABE87A10072CBF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB198AD61ABE87A10072CBF3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,10 +183,12 @@
 				FB198AA21ABE87090072CBF3 /* Sources */,
 				FB198AA31ABE87090072CBF3 /* Frameworks */,
 				FB198AA41ABE87090072CBF3 /* Resources */,
+				FB198AE01ABE87A10072CBF3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FB198ADB1ABE87A10072CBF3 /* PBXTargetDependency */,
 			);
 			name = jongkey;
 			productName = jongkey;
@@ -157,6 +213,23 @@
 			productReference = FB198ABF1ABE87090072CBF3 /* jongkeyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FB198AD21ABE87A10072CBF3 /* custom_keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB198ADD1ABE87A10072CBF3 /* Build configuration list for PBXNativeTarget "custom_keyboard" */;
+			buildPhases = (
+				FB198ACF1ABE87A10072CBF3 /* Sources */,
+				FB198AD01ABE87A10072CBF3 /* Frameworks */,
+				FB198AD11ABE87A10072CBF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = custom_keyboard;
+			productName = custom_keyboard;
+			productReference = FB198AD31ABE87A10072CBF3 /* custom_keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +245,9 @@
 					FB198ABE1ABE87090072CBF3 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = FB198AA51ABE87090072CBF3;
+					};
+					FB198AD21ABE87A10072CBF3 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -190,6 +266,7 @@
 			targets = (
 				FB198AA51ABE87090072CBF3 /* jongkey */,
 				FB198ABE1ABE87090072CBF3 /* jongkeyTests */,
+				FB198AD21ABE87A10072CBF3 /* custom_keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +283,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FB198ABD1ABE87090072CBF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB198AD11ABE87A10072CBF3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,6 +317,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB198ACF1ABE87A10072CBF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB198AD91ABE87A10072CBF3 /* KeyboardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +332,11 @@
 			isa = PBXTargetDependency;
 			target = FB198AA51ABE87090072CBF3 /* jongkey */;
 			targetProxy = FB198AC01ABE87090072CBF3 /* PBXContainerItemProxy */;
+		};
+		FB198ADB1ABE87A10072CBF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB198AD21ABE87A10072CBF3 /* custom_keyboard */;
+			targetProxy = FB198ADA1ABE87A10072CBF3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,6 +490,30 @@
 			};
 			name = Release;
 		};
+		FB198ADE1ABE87A10072CBF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = custom_keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FB198ADF1ABE87A10072CBF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = custom_keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -418,6 +539,14 @@
 			buildConfigurations = (
 				FB198ACD1ABE87090072CBF3 /* Debug */,
 				FB198ACE1ABE87090072CBF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB198ADD1ABE87A10072CBF3 /* Build configuration list for PBXNativeTarget "custom_keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB198ADE1ABE87A10072CBF3 /* Debug */,
+				FB198ADF1ABE87A10072CBF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
